@@ -13,7 +13,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public routes (redirect if already logged in) */}
         <Route
           path="/login"
           element={
@@ -31,7 +30,6 @@ function App() {
           }
         />
 
-        {/* Protected app routes */}
         <Route
           element={
             <ProtectedRoute>

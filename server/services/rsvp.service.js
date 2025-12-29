@@ -7,7 +7,6 @@ export const rsvpToEventService = async (eventId, userId) => {
   session.startTransaction();
 
   try {
-    // 1️⃣ Atomically reduce available slots
     const event = await Event.findOneAndUpdate(
       { _id: eventId, availableSlots: { $gt: 0 } },
       { $inc: { availableSlots: -1 } },
@@ -18,7 +17,6 @@ export const rsvpToEventService = async (eventId, userId) => {
       throw new Error("Event is full or does not exist");
     }
 
-    // 2️⃣ Create RSVP (unique index prevents duplicates)
     await RSVP.create([{ eventId, userId }], { session });
 
     await session.commitTransaction();
@@ -29,7 +27,6 @@ export const rsvpToEventService = async (eventId, userId) => {
     await session.abortTransaction();
     session.endSession();
 
-    // Handle duplicate RSVP error
     if (error.code === 11000) {
       throw new Error("You have already RSVP’d to this event");
     }

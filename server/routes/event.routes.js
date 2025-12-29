@@ -4,10 +4,10 @@ import { protect } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
-router.get("/", getEvents);                  // Public
-router.post("/", protect, createEvent);      // Protected
-router.put("/:id", protect, updateEvent);    // 🔒 Owner only
-router.delete("/:id", protect, deleteEvent); // 🔒 Owner only
+router.get("/", getEvents);                  
+router.post("/", protect, createEvent);      
+router.put("/:id", protect, updateEvent);    
+router.delete("/:id", protect, deleteEvent); 
 router.get("/my-events", protect, getMyEvents);
 
 

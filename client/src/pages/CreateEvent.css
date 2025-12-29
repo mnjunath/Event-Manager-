@@ -1,4 +1,3 @@
-/* ===== PAGE WRAPPER ===== */
 .create-event-page {
   max-width: 500px;
   margin: 40px auto;
@@ -6,7 +5,6 @@
   animation: fadeIn 0.4s ease;
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -18,7 +16,6 @@
   }
 }
 
-/* ===== FORM ===== */
 .event-form {
   background-color: #ffffff;
   padding: 22px;
@@ -26,7 +23,6 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-/* ===== FORM GROUP ===== */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -54,7 +50,6 @@
   box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
 }
 
-/* ===== SUBMIT BUTTON ===== */
 .submit-btn {
   margin-top: 10px;
   width: 100%;
@@ -74,7 +69,6 @@
   transform: translateY(-1px);
 }
 
-/* ===== MOBILE ===== */
 @media (max-width: 480px) {
   .create-event-page {
     margin: 20px auto;

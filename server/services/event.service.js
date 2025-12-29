@@ -41,7 +41,6 @@ export const updateEventService = async (eventId, userId, updateData) => {
     throw new Error("Event not found");
   }
 
-  // 🔒 Ownership check
   if (event.createdBy.toString() !== userId) {
     throw new Error("Not authorized to update this event");
   }
@@ -59,7 +58,6 @@ export const deleteEventService = async (eventId, userId) => {
     throw new Error("Event not found");
   }
 
-  // 🔒 Ownership check
   if (event.createdBy.toString() !== userId) {
     throw new Error("Not authorized to delete this event");
   }
