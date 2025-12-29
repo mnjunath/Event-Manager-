@@ -1,89 +1,58 @@
-# 🎉 Event Manager – Full Stack MERN Application
+# 🎟️ Event Manager – Full Stack MERN Application
 
-A full-stack Event Management web application where users can register, log in, create events, RSVP to events, and manage their RSVPs.  
-Built using **React (Vite)** on the frontend and **Node.js, Express, MongoDB** on the backend.
-
----
-
-## 🚀 Features
-
-### 🔐 Authentication
-- User registration & login
-- JWT-based authentication
-- Protected routes for authenticated users
-
-### 📅 Events
-- Create new events
-- Update event details
-- Delete events
-- View all available events
-
-### ✅ RSVP System
-- RSVP to events
-- Remove RSVP
-- View all events you have RSVP’d to
-- Automatic update of available slots
-
-### 🎨 Frontend
-- Built with React + Vite
-- Plain CSS (no UI libraries)
-- Responsive design (mobile friendly)
-- Clean animations and smooth UI transitions
-
-### ⚙️ Backend
-- RESTful API with Express
-- MongoDB with Mongoose
-- Layered architecture (routes, controllers, services)
-- Secure password hashing
-- Token-based authorization middleware
+A full-stack Event Management platform where users can register, log in, create events, RSVP to events, and manage their RSVPs.  
+Built using the MERN stack with secure authentication and deployed to production.
 
 ---
 
-## 🧠 Tech Stack
+## 🚀 Live Deployment
+
+### 🌐 Frontend (Netlify)
+👉 https://eventmanager33.netlify.app/
+
+### 🖥️ Backend API (Render)
+👉 https://event-manager-0woe.onrender.com
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
 - React (Vite)
-- React Router DOM
+- JavaScript
 - Axios
+- React Router
 - Plain CSS
 
 ### Backend
 - Node.js
 - Express.js
-- MongoDB
+- MongoDB (Atlas)
 - Mongoose
-- JWT (JSON Web Tokens)
-- bcrypt
+- JWT Authentication
+
+### Deployment
+- Frontend: Netlify
+- Backend: Render
 
 ---
 
-## 📁 Project Structure
+## ✨ Features
 
-```text
-event-manager/
-├── client/
-│   ├── public/
-│   ├── src/
-│   │   ├── api/
-│   │   ├── components/
-│   │   ├── layouts/
-│   │   ├── pages/
-│   │   ├── utils/
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── index.css
-│   └── package.json
-│
-├── server/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── services/
-│   ├── utils/
-│   ├── app.js
-│   ├── server.js
-│   └── package.json
-│
-└── README.md
+- User authentication (Register / Login / Logout)
+- JWT-based protected routes
+- Create, edit, and delete events
+- RSVP to events
+- Remove RSVP
+- View personal RSVPs
+- Real-time slot availability update
+- Environment-based configuration
+- Responsive UI
+
+---
+
+## ⚙️ Environment Variables
+
+### Frontend (`client/.env`)
+```env
+VITE_API_URL=https://event-manager-0woe.onrender.com
